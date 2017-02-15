@@ -1,0 +1,24 @@
+[user]
+	name = Patrick Scheid
+	email = p.scheid92@gmail.com
+[github]
+	user = pscheid92
+
+[push]
+	default = simple
+[alias]
+	logall = log --oneline --graph --all --decorate
+	plog = log --oneline --graph --decorate
+[merge]
+	tool = meld
+[diff]
+	tool = meld
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[color "diff"]
+	old = red strike
+	new = green italic
