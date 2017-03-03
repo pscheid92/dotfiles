@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# This script updates the installed git version.
+#
+# Requirements:
+#   - Checked out git repository from github
+#   - Installed git version
+#
+# In my case the new version is installed to /usr/local/git
+# which is already in my PATH variable.
+#
+# SECURITY-ISSUE:
+#   Since I use ssh with public-key-auth I need to run
+#   the most commands as a normal user and sudo only one.
+#   Therefore I change sudoers to allow sudo for this script
+#   without password auth.
+
+# Global options
+USER='pscheid'
+GIT_REPO='/home/pscheid/Repositories/git/'
+GIT_DEST='/usr/local/git'
+MAKE_OPT='-j8'
+
+# Check remote for new version
+cd "$GIT_REPO"
+git checkout master
+git remote update
+NEW_COMMITS=`git log master..origin/master --oneline`
+
+# If new no commit found, don't update software
+[[ -z "$NEW_COMMITS" && "$1" != "--force" ]] && echo "No new version found ..." && exit
+
+# New version is found, therefore get changes
+git pull origin master
+
+# Install new version accordingly
+make $MAKE_OPT configure
+./configure --prefix="$GIT_DEST"
+sudo make $MAKE_OPT all doc info
+sudo make $MAKE_OPT install install-doc install-html install-info
+
