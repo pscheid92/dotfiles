@@ -11,4 +11,5 @@ DOTFILES="$HOME/.dotfiles"
 ln "$DOTFILES/zshrc" -s "$HOME/.zshrc"
 ln "$DOTFILES/git/.gitconfig" -s "$HOME/.gitconfig"
 ln "$DOTFILES/bin/" -s "$HOME/.bin/"
+ln "$DOTFILES/zprofile" -s "$HOME/.zprofile"
 
