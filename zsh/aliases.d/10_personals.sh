@@ -5,5 +5,5 @@ alias mkdir='mkdir -p'
 alias l='ls -lAh'
 
 # Preventing less from line wrapping
-alias less='less -S'
+alias less='less -SXRF'
 
