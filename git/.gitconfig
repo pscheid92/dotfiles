@@ -1,6 +1,7 @@
 [user]
 	name = Patrick Scheid
 	email = p.scheid92@gmail.com
+	signingkey = B579AC2AA9C02ECF
 [github]
 	user = pscheid92
 
@@ -33,3 +34,5 @@
   added = yellow
   changed = green
   untracked = cyan
+[gpg]
+	program = gpg2
