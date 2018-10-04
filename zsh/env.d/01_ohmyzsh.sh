@@ -14,7 +14,7 @@ ZSH_THEME="fishy"
 autoload -U zmv
 
 # Plugins list
-plugins=(command-not-found compleat docker git git-extras git-flow-avh gitignore gradle mvn npm pip python pylint sbt scala sudo systemd wd zmv zsh-syntax-highlighting)
+plugins=(command-not-found compleat docker git git-extras git-flow-avh gitignore gradle pip python pylint sbt scala sudo systemd zsh-syntax-highlighting golang vagrant zsh-autosuggestions)
 
 # Load startup script
 source $ZSH/oh-my-zsh.sh
