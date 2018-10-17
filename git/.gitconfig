@@ -14,6 +14,7 @@
 [core]
 	editor = vim
 	pager = less -SRFX
+	autocrlf = input
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -22,17 +23,21 @@
 [color]
   ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
+  current = blue reverse
+  local = blue
   remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold strike
-  new = green bold italic
+  meta = blue
+  frag = magenta
+  old = red strike
+  new = green italic
 [color "status"]
-  added = yellow
+  added = blue
   changed = green
   untracked = cyan
+[rerere]
+  enabled = true
 [gpg]
 	program = gpg2
+[difftool]
+	prompt = false

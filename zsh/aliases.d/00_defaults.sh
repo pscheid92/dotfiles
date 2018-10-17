@@ -2,7 +2,7 @@
 alias cp="cp -i"	# confirm before overwriting
 alias df="df -h"	# use human-readable sizes
 alias free="free -m"	# show sizes in MB
-alias ll='ls -lh'	# list lines with human-readable sizes
+#alias ll='ls -Alh'	# list lines with human-readable sizes
 alias la='ls -ah' 	# list all with human-readable sizes
 alias lla='ls -lah'	# list lines all with human-readable sizes
 alias rm='rm -I'	# Make rm save

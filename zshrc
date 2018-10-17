@@ -12,10 +12,9 @@ done
 # Exporting
 export DOTFILES
 
+# Activate completion cache for packages
+zstyle ':completion::complete:*' use-cache 1
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/pscheid/.sdkman"
 [[ -s "/home/pscheid/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pscheid/.sdkman/bin/sdkman-init.sh"
-
-# Activate caching for zsh completion
-zstyle ':completion::complete:*' use-cache 1
-
