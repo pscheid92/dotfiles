@@ -4,5 +4,7 @@
 #
 updateme() {
 	sudo dnf upgrade --refresh -y
+	flatpak update
+	# flatpak update --user
 }
 
