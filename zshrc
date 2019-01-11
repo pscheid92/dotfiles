@@ -18,3 +18,6 @@ zstyle ':completion::complete:*' use-cache 1
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/pscheid/.sdkman"
 [[ -s "/home/pscheid/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pscheid/.sdkman/bin/sdkman-init.sh"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
