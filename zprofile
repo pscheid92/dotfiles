@@ -1,12 +1,11 @@
 # Setting GO in PATH
-export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/Projekte/Go
 export PATH=$PATH:$GOPATH/bin
 
 # Export JAVA_HOME for all
-export JAVA_HOME=/home/pscheid/.sdkman/candidates/java/current
-export LD_LIBRARY_PATH=/home/pscheid/.sdkman/candidates/java/current/lib/server/:/home/pscheid/.sdkman/candidates/java/current/lib:$LD_LIBRARY_PATH
+export JAVA_HOME=$HOME/.asdf/installs/java/openjdk-12.0.1/
+export LD_LIBRARY_PATH=$JAVA_HOME/lib/:$JAVA_HOME/lib/server:$LD_LIBRARY_PATH
 
 # Set personal R library path and RStudio R version
 export R_LIBS_USER=/home/pscheid/.R/packages
