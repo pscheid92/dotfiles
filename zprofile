@@ -1,7 +1,7 @@
 # Setting GO in PATH
-export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/Projekte/Go
 export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
 
 # Export JAVA_HOME for all
 export JAVA_HOME=$HOME/.asdf/installs/java/openjdk-12.0.1/
