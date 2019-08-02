@@ -12,8 +12,3 @@ done
 # Exporting
 export DOTFILES
 
-# Activate completion cache for packages
-zstyle ':completion::complete:*' use-cache 1
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
