@@ -21,23 +21,24 @@
 	process = git-lfs filter-process
 	required = true
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = blue reverse
-  local = blue
-  remote = green
+	current = blue reverse
+	local = blue
+	remote = green
 [color "diff"]
-  meta = blue
-  frag = magenta
-  old = red strike
-  new = green italic
+	meta = blue
+	frag = magenta
+	old = red strike
+ 	new = green italic
 [color "status"]
-  added = blue
-  changed = green
-  untracked = cyan
+	added = blue
+	changed = green
+	untracked = cyan
 [rerere]
-  enabled = true
+ 	enabled = true
 [gpg]
 	program = gpg2
 [difftool]
 	prompt = false
+
