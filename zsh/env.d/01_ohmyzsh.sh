@@ -9,15 +9,14 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 # Loading theme
-ZSH_THEME="dracula"
-
-autoload -U zmv
+ZSH_THEME="fishy"
 
 # Plugins list
-plugins=(asdf command-not-found compleat docker golang git git-extras git-flow-avh gitignore gradle pip python pylint systemd zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(asdf command-not-found compleat docker golang git git-extras gitignore gradle systemd)
 
 # Load startup script
 source $ZSH/oh-my-zsh.sh
 
 # Deactivate options from oh-my-zsh
 unsetopt autopushd
+
