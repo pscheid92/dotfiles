@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DOTFILES=$(pwd)
+
+delete_and_link() {
+    echo "Link file $1 to $2 ..."
+    rm $HOME/$2
+    ln -s $DOTFILES/configs/$1 $HOME/$2
+}
+
+delete_and_link gitconfig .gitconfig
+delete_and_link zprofile .zprofile
+delete_and_link zshrc .zshrc
+
