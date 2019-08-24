@@ -9,5 +9,5 @@ export LD_LIBRARY_PATH=$JAVA_HOME/lib/:$JAVA_HOME/lib/server:$LD_LIBRARY_PATH
 
 # Set personal R library path and RStudio R version
 export R_LIBS_USER=/home/pscheid/.R/packages
-export RSTUDIO_WHICH_R=/opt/microsoft/ropen/3.5.1/lib64/R/bin/R
+export RSTUDIO_WHICH_R=/opt/microsoft/ropen/3.5.3/lib64/R/bin/R
 
