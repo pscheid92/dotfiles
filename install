@@ -3,6 +3,7 @@
 DOTFILES=$HOME/.dotfiles
 
 delete_and_link() {
+    rm $HOME/$2
     ln -s $DOTFILES/configs/$1 $HOME/$2
 }
 
