@@ -1,10 +1,8 @@
 #!/bin/bash
 
-DOTFILES=$(pwd)
+DOTFILES=$HOME/.dotfiles
 
 delete_and_link() {
-    echo "Link file $1 to $2 ..."
-    rm $HOME/$2
     ln -s $DOTFILES/configs/$1 $HOME/$2
 }
 
