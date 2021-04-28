@@ -12,6 +12,11 @@ done
 # Exporting
 export DOTFILES
 
+
+# TEMPORARY:
+# Try xdg-open alias
+alias open=xdg-open
+
 # TEMPORARY:
 # Try kubectl autocomplete
 source <(kubectl completion zsh)
