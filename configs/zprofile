@@ -4,8 +4,7 @@ export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 
 # Export JAVA_HOME for all
-export JAVA_HOME=$HOME/.asdf/installs/java/openjdk-15.0.1
-export LD_LIBRARY_PATH=$JAVA_HOME/lib/:$JAVA_HOME/lib/server:$LD_LIBRARY_PATH
+export JAVA_HOME="$HOME/.asdf/installs/java/openjdk-16.0.1"
 
 # Set personal R library path and RStudio R version
 export R_LIBS_USER=/home/pscheid/.R/packages
