@@ -12,11 +12,10 @@ fi
 ZSH_THEME="fishy"
 
 # Plugins list
-plugins=(asdf command-not-found compleat docker golang git gitfast git-extras gitignore gradle systemd)
+plugins=(asdf docker golang git gitfast gitignore rust ripgrep systemd)
 
 # Load startup script
 source $ZSH/oh-my-zsh.sh
 
 # Deactivate options from oh-my-zsh
 unsetopt autopushd
-

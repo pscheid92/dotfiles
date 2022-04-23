@@ -1,11 +1,4 @@
 # Setting GO in PATH
-export GOPATH=$HOME/Projekte/Go
+export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:$GOPATH/bin
-export GO111MODULE=on
-
-# Export JAVA_HOME for all
-export JAVA_HOME="$HOME/.asdf/installs/java/openjdk-16.0.1"
-
-# Set personal R library path and RStudio R version
-export R_LIBS_USER=/home/pscheid/.R/packages
 

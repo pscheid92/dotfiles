@@ -1,6 +1,3 @@
-# Reading profile.d
-source /etc/profile
-
 # Setting dotfile folder
 DOTFILES=$HOME/.dotfiles
 
@@ -11,11 +8,6 @@ done
 
 # Exporting
 export DOTFILES
-
-
-# TEMPORARY:
-# Try xdg-open alias
-alias open=xdg-open
 
 # TEMPORARY:
 # Try kubectl autocomplete
