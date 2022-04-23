@@ -8,12 +8,3 @@ done
 
 # Exporting
 export DOTFILES
-
-# TEMPORARY:
-# Try kubectl autocomplete
-source <(kubectl completion zsh)
-
-# TEMPORARY:
-# Try helm autocomplete
-source <(helm completion zsh)
-

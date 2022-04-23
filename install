@@ -10,4 +10,3 @@ delete_and_link() {
 delete_and_link gitconfig .gitconfig
 delete_and_link zprofile .zprofile
 delete_and_link zshrc .zshrc
-

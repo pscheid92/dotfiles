@@ -1,4 +1,3 @@
 # Setting GO in PATH
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:$GOPATH/bin
-

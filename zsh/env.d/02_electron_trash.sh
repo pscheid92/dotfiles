@@ -2,4 +2,3 @@
 #
 # This is only neccessary for VS Code if started by console 'code' command.
 export ELECTRON_TRASH=gio
-
