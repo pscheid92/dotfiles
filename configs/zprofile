@@ -1,3 +1,12 @@
 # Setting GO in PATH
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:$GOPATH/bin
+
+# Setting Python in PATH
+export PATH=/opt/homebrew/bin/python3:$PATH
+
+# Add personal binaries to path
+export PATH="$PATH:$HOME/.local/bin"
+
+# Load homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"

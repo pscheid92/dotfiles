@@ -1,7 +1,10 @@
 [user]
 	name = Patrick Scheid
 	email = p.scheid92@gmail.com
+
 [init]
 	defaultBranch = main
+
 [core]
-	excludesfile = /home/pscheid/.gitignore_global
+	excludesfile = /Users/pscheid/.gitignore_global
+

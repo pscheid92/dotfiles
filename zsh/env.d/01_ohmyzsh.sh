@@ -1,7 +1,7 @@
 ## Activate oh-my-zsh
 
 # Prepare
-ZSH='/home/pscheid/.oh-my-zsh/'
+ZSH='/Users/pscheid/.oh-my-zsh/'
 DISABLE_AUTO_UPDATE='true'
 ZSH_CACHE_DIR="$HOME/.oh-my-zsh/cache-dir"
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

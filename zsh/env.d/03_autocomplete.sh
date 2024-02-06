@@ -6,4 +6,4 @@ source <(helm completion zsh)
 source <(buf completion zsh)
 
 # secretli related
-source <(secretli completion zsh)
+# source <(secretli completion zsh)
