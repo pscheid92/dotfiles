@@ -10,3 +10,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Load homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Lookup homebrew for shared libraries
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$(brew --prefix)/lib"
