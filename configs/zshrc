@@ -1,10 +1,14 @@
-# Setting dotfile folder
+export OMZ_SKIP_COMPINIT=1
+
+autoload -Uz compinit                 # make the real function visible
+compinit -u -C -d ~/.zcompdump        # fast, no audit, cached (~3 ms)
+
+compinit()  { : }
+compaudit() { : }
+zrecompile() { : }
+
+# load configs
+setopt extendedglob
 DOTFILES=$HOME/.dotfiles
-
-# Reading in zsh configuration
-for FILE in $DOTFILES/zsh/**/*; do
-    [ -f "$FILE" ] && source "$FILE"
-done
-
-# Exporting
+for f ($DOTFILES/zsh/**/*(.N)) source $f
 export DOTFILES

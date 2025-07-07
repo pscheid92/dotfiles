@@ -2,8 +2,8 @@
 # see: https://martinheinz.dev/blog/110
 
 export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=10000000
-export SAVEHIST=10000000
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 export HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
 

@@ -2,9 +2,6 @@
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:$GOPATH/bin
 
-# Setting Python in PATH
-export PATH=/opt/homebrew/bin/python3:$PATH
-
 # Add personal binaries to path
 export PATH="$PATH:$HOME/.local/bin"
 
@@ -13,3 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Lookup homebrew for shared libraries
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$(brew --prefix)/lib"
+
+# Setting PATH for Python 3.13
+PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
+export PATH
