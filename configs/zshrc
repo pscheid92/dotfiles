@@ -1,7 +1,13 @@
-export OMZ_SKIP_COMPINIT=1
+# zmodload zsh/zprof
+# zprof
+# Got slow? Try precompiling (correct syntax without -R):
+# for f in ~/.dotfiles/**/*.zsh(N); do zcompile "$f"; done
+# for f in $ZSH/**/*.zsh(N); do zcompile "$f"; done
 
-autoload -Uz compinit                 # make the real function visible
-compinit -u -C -d ~/.zcompdump        # fast, no audit, cached (~3 ms)
+export SKIP_COMPINIT=true
+
+autoload -Uz compinit
+compinit -u -C -d ~/.zcompdump
 
 compinit()  { : }
 compaudit() { : }
@@ -10,5 +16,5 @@ zrecompile() { : }
 # load configs
 setopt extendedglob
 DOTFILES=$HOME/.dotfiles
-for f ($DOTFILES/zsh/**/*(.N)) source $f
+for f ($DOTFILES/zsh/**/*.zsh(.N)) source $f
 export DOTFILES

@@ -2,12 +2,16 @@
 alias cp="cp -i"	    # confirm before overwriting
 alias df="df -h"	    # use human-readable sizes
 alias free="free -m"    # show sizes in MB
-alias la='ls -ah' 	    # list all with human-readable sizes
-alias lla='ls -lah'	    # list lines all with human-readable sizes
 alias rm='rm -I'	    # Make rm save
+alias mkdir='mkdir -p'  # mkdir allow deeper folder creation
 
 # Set terminal coloring
-alias ls='ls --color=auto'	     # Coloring ls
 alias grep='grep --color=auto' 	 # Coloring grep
 alias egrep='egrep --color=auto' # Coloring egrep
 alias fgrep='fgrep --color=auto' # Coloring fgrep
+
+# Improve listing
+alias ls='eza'          # use eza
+alias la='eza -a'       # show also hidden files
+alias ll='eza -lhX'     # list files with human-readable sizes without resolving sym-links
+alias lla='eza -alhX'   # list all files with human-readable sizes without resolving sym-links
