@@ -1,6 +1,6 @@
 # zmodload zsh/zprof
 # zprof
-# Got slow? Try precompiling (correct syntax without -R):
+# Got slow? Try precompiling
 # for f in ~/.dotfiles/**/*.zsh(N); do zcompile "$f"; done
 # for f in $ZSH/**/*.zsh(N); do zcompile "$f"; done
 
