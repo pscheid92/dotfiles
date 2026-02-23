@@ -15,3 +15,7 @@ alias ls='eza'          # use eza
 alias la='eza -a'       # show also hidden files
 alias ll='eza -lhX'     # list files with human-readable sizes without resolving sym-links
 alias lla='eza -alhX'   # list all files with human-readable sizes without resolving sym-links
+
+# kubernetes
+alias k='kubectl'
+

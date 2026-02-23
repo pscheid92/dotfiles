@@ -7,3 +7,5 @@
 
 [core]
 	excludesfile = /Users/pscheid/.gitignore_global
+[push]
+	autoSetupRemote = true

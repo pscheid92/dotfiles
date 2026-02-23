@@ -18,3 +18,4 @@ setopt extendedglob
 DOTFILES=$HOME/.dotfiles
 for f ($DOTFILES/zsh/**/*.zsh(.N)) source $f
 export DOTFILES
+
