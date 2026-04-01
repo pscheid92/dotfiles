@@ -1,12 +1,26 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-DOTFILES=$HOME/.dotfiles
+DOTFILES="$(dirname "$(realpath "$0")")"
 
-delete_and_link() {
-    rm $HOME/$2
-    ln -s $DOTFILES/configs/$1 $HOME/$2
+link() {
+    local src="$DOTFILES/configs/$1"
+    local dst="$HOME/$2"
+
+    if [ ! -e "$src" ]; then
+        echo "SKIP  $src (not found)"
+        return
+    fi
+
+    if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
+        echo "OK    $dst -> $src"
+        return
+    fi
+
+    ln -sf "$src" "$dst"
+    echo "LINK  $dst -> $src"
 }
 
-delete_and_link gitconfig .gitconfig
-delete_and_link zprofile .zprofile
-delete_and_link zshrc .zshrc
+link gitconfig .gitconfig
+link zprofile  .zprofile
+link zshrc     .zshrc
