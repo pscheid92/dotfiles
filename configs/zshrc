@@ -14,7 +14,6 @@ zrecompile() { : }
 
 # load configs
 setopt extendedglob
-DOTFILES=$HOME/.dotfiles
-for f ($DOTFILES/zsh/**/*.zsh(.N)) source $f
-export DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+for f ($DOTFILES/zsh/**/*.zsh(.N)) source "$f"
 
