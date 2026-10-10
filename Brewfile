@@ -50,6 +50,8 @@ brew "git-delta"
 brew "go"
 # Database migrations CLI tool
 brew "golang-migrate"
+# Fast linters runner for Go
+brew "golangci-lint"
 # Like cURL, but for gRPC
 brew "grpcurl"
 # Command-line interface for Hetzner Cloud
