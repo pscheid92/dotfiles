@@ -1,4 +1,4 @@
-# Go: GOPATH for shells and scripts that read the variable. `install` also
-# writes it to Go's config file (go env -w) for apps started outside a shell.
-export GOPATH="$HOME/Projects/Go"
-export PATH="$PATH:$GOPATH/bin"
+# Go reads GOPATH (~/Projects/Go) from its own config file, which `install`
+# writes with go env -w, so shells and apps started outside one agree.
+# Only binaries installed with `go install` need to go on PATH.
+path+=("$HOME/Projects/Go/bin")
