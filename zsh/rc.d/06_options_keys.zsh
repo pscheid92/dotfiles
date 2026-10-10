@@ -32,8 +32,6 @@ bindkey '^[[1;5C' forward-word                # Ctrl-Right
 bindkey '^[[1;5D' backward-word               # Ctrl-Left
 bindkey '^[[Z' reverse-menu-complete          # Shift-Tab
 bindkey ' ' magic-space                       # expand !! and friends on space
-bindkey '^[m' copy-prev-shell-word            # Alt-m
-bindkey '^[w' kill-region                     # Alt-w
 bindkey '^X^E' edit-command-line              # edit the command line in $EDITOR
 
 # quote URLs while typing or pasting them (? & ...)
