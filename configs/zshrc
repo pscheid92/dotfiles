@@ -9,7 +9,7 @@
 # no duplicate entries, also when a shell starts another one
 typeset -U path fpath
 
-# load configs (compinit runs in rc.d/00_ohmyzsh.zsh)
+# load configs (compinit runs in rc.d/00_completion.zsh)
 export DOTFILES="${${(%):-%x}:A:h:h}"  # repo root, resolved through the ~/.zshrc symlink
 for f ($DOTFILES/zsh/{rc,aliases}.d/*.zsh(.N)) source "$f"
 unset f
