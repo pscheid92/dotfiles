@@ -17,10 +17,22 @@ link() {
         return
     fi
 
-    ln -sf "$src" "$dst"
+    # keep a real file that differs instead of silently replacing it
+    if [ -e "$dst" ] && [ ! -L "$dst" ] && ! cmp -s "$src" "$dst"; then
+        local backup
+        backup="$dst.backup-$(date +%Y%m%d-%H%M%S)"
+        mv "$dst" "$backup"
+        echo "SAVE  $dst -> $backup"
+    fi
+
+    mkdir -p "$(dirname "$dst")"
+    ln -sfn "$src" "$dst"
     echo "LINK  $dst -> $src"
 }
 
-link gitconfig .gitconfig
-link zprofile  .zprofile
-link zshrc     .zshrc
+link gitconfig        .gitconfig
+link gitignore_global .gitignore_global
+link starship.toml    .config/starship.toml
+link zshenv          .zshenv
+link zprofile         .zprofile
+link zshrc            .zshrc

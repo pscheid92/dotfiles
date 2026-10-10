@@ -1,0 +1,5 @@
+format = "$directory$character$git_branch$git_status"
+add_newline=false
+
+[git_status]
+stashed = ''

@@ -1,19 +1,23 @@
+# Profiling: uncomment, open a new shell and run `zprof`
 # zmodload zsh/zprof
-# zprof
 # Got slow? Try precompiling
 # for f in ~/.dotfiles/**/*.zsh(N); do zcompile "$f"; done
 
-export SKIP_COMPINIT=true
+# Interactive shells: options, completion, prompt, hooks, aliases. The
+# environment (PATH, ...) comes from .zprofile, which login shells read first.
 
-autoload -Uz compinit
-compinit -u -C -d ~/.zcompdump
+# no duplicate entries, also when a shell starts another one
+typeset -U path fpath
 
-compinit()  { : }
-compaudit() { : }
-zrecompile() { : }
+# load configs (compinit runs in rc.d/00_ohmyzsh.zsh)
+export DOTFILES="${${(%):-%x}:A:h:h}"  # repo root, resolved through the ~/.zshrc symlink
+for f ($DOTFILES/zsh/{rc,aliases}.d/*.zsh(.N)) source "$f"
+unset f
 
-# load configs
-setopt extendedglob
-export DOTFILES="$HOME/.dotfiles"
-for f ($DOTFILES/zsh/**/*.zsh(.N)) source "$f"
+# machine-local settings and secrets, not tracked in this repo
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
+# syntax highlighting has to be sourced last, after all widgets are defined
+ZSH_HIGHLIGHT_SCRIPT="${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -r "$ZSH_HIGHLIGHT_SCRIPT" ]] && source "$ZSH_HIGHLIGHT_SCRIPT"
+unset ZSH_HIGHLIGHT_SCRIPT

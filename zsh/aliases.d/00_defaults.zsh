@@ -1,7 +1,6 @@
 # Defaults
 alias cp="cp -i"	    # confirm before overwriting
 alias df="df -h"	    # use human-readable sizes
-alias free="free -m"    # show sizes in MB
 alias mkdir='mkdir -p'  # mkdir allow deeper folder creation
 
 # Set terminal coloring

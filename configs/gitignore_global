@@ -1,0 +1,22 @@
+# IDE/editor
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+Thumbs.db
+
+# Environment/secrets
+.env
+.env.local

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Homebrew's python@3.14 links its XML module against macOS's libexpat, which on
+# macOS 26.0 lacks a symbol it needs, so every aws command that parses XML (all
+# of S3) fails. Homebrew's keg-only expat has it. Delete this file once
+# `/opt/homebrew/bin/aws s3 ls` works without it.
+prefix="${HOMEBREW_PREFIX:-/opt/homebrew}"
+export DYLD_LIBRARY_PATH="$prefix/opt/expat/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+exec "$prefix/bin/aws" "$@"

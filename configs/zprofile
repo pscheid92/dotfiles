@@ -1,16 +1,10 @@
-# Setting GO in PATH
-export GOPATH="$HOME/Projects/Go"
-export PATH="$PATH:$GOPATH/bin"
+# Login shells read this once, before .zshrc. Exported environment goes here
+# (PATH, tool homes, EDITOR, ...): child processes inherit it, including
+# non-interactive `zsh -lc` commands. Interactive setup goes in .zshrc.
 
-# Add personal binaries to path
-export PATH="$PATH:$HOME/.local/bin"
+# no duplicate entries, also when a shell starts another one
+typeset -U path fpath
 
-# Load homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Lookup homebrew for shared libraries
-export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+$DYLD_LIBRARY_PATH:}$(brew --prefix)/lib"
-
-# Setting PATH for Python 3.13
-PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
-export PATH
+export DOTFILES="${${(%):-%x}:A:h:h}"  # repo root, resolved through the ~/.zprofile symlink
+for f ($DOTFILES/zsh/profile.d/*.zsh(.N)) source "$f"
+unset f

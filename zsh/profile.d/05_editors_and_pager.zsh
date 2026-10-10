@@ -5,4 +5,3 @@ export VISUAL=vim
 # Setting PAGER options
 export PAGER=less
 export LESS="-SXRF"
-

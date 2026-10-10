@@ -1,0 +1,4 @@
+# read by every zsh, including scripts: keep this minimal
+
+# rustup: cargo and rustc on PATH
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
