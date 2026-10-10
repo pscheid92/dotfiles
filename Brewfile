@@ -18,6 +18,10 @@ brew "cmake"
 brew "coreutils"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# Command-line DNS Client for Humans
+brew "doggo"
+# More intuitive version of du in rust
+brew "dust"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
 # XML 1.0 parser
@@ -30,6 +34,8 @@ brew "fd"
 brew "ffmpeg"
 # Fast and simple Node.js version manager
 brew "fnm"
+# Terminal JSON viewer
+brew "fx"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -58,6 +64,8 @@ brew "hyperfine"
 brew "just"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Simple terminal UI for git commands
+brew "lazygit"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
 # Neural Network Go engine with no human-provided knowledge
@@ -98,6 +106,8 @@ brew "sops"
 brew "sqlc"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
 # Strong open-source chess engine
 brew "stockfish"
 # Terminal multiplexer
