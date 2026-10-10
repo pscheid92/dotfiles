@@ -41,3 +41,10 @@ link vimrc                .vimrc
 link ssh_config           .ssh/config
 link claude/CLAUDE.md     .claude/CLAUDE.md
 link claude/settings.json .claude/settings.json
+
+# GOPATH in Go's own config file, so go and gopls use it even when started
+# outside a login shell (GoLand, VS Code, Claude); otherwise they fall back to ~/go
+if command -v go >/dev/null; then
+    go env -w GOPATH="$HOME/Projects/Go"
+    echo "SET   go env GOPATH=$HOME/Projects/Go"
+fi
