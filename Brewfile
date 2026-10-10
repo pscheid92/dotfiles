@@ -50,8 +50,6 @@ brew "grpcurl"
 brew "hcloud"
 # Kubernetes package manager
 brew "helm"
-# User-friendly cURL replacement (command-line HTTP client)
-brew "httpie"
 # Configurable static site generator
 brew "hugo"
 # Command-line benchmarking tool
@@ -78,8 +76,6 @@ brew "minisign"
 brew "ninja"
 # Development kit for the Java programming language
 brew "openjdk"
-# CLI for Postgres with auto-completion and syntax highlighting
-brew "pgcli"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -163,3 +159,9 @@ cask "orbstack"
 cask "pscheid92/tap/pqsign", trusted: true
 # Open-source code editor
 cask "visual-studio-code"
+uv "cqlsh"
+uv "httpie"
+uv "ipython"
+uv "it2"
+uv "jupyter-core", with: ["jupyterlab"]
+uv "pgcli", with: ["psycopg-binary"]

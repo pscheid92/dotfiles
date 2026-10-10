@@ -36,11 +36,11 @@ silicon with Homebrew.
   history, hooks, functions), sourced in order by `.zshrc`
 - `zsh/aliases.d/`: aliases, sourced by `.zshrc` after `rc.d/`
 - `bin/`: wrapper scripts, ahead of Homebrew on `PATH`
-- `Brewfile`: Homebrew taps, formulae and casks only (VS Code, npm, cargo, krew
-  and uv entries need their tools installed first). Refresh with:
+- `Brewfile`: Homebrew taps, formulae, casks and uv tools (VS Code, npm, cargo
+  and krew entries need their tools installed first). Refresh with:
 
   ```sh
-  brew bundle dump --force --file=- | grep -vE '^(vscode|npm|cargo|krew|uv|go) ' > ~/.dotfiles/Brewfile
+  brew bundle dump --force --file=- | grep -vE '^(vscode|npm|cargo|krew|go) ' > ~/.dotfiles/Brewfile
   ```
 
   The dump only lists apps Homebrew manages: take over a manually installed one
