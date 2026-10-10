@@ -74,6 +74,11 @@ stays nearly empty.
   <kbd>Ctrl</kbd>-<kbd>G</kbd> (or <kbd>Alt</kbd>-<kbd>C</kbd>) cd into a
   subdirectory. Alt only works with iTerm2's Option key set to Esc+, which the
   German layout needs for `@ [ ] { } | ~`.
+- API keys live in 1Password, not in `~/.zshrc.local`. A project that needs one
+  loads it with direnv: put
+  `export GEMINI_API_KEY="$(op read 'op://Personal/Gemini API/credential')"` in
+  its `.envrc` and run `direnv allow`. Copy a field's `op://` path with
+  "Copy Secret Reference" in 1Password.
 - `~/.claude/settings.json` is a symlink into this repo. If Claude Code ever
   replaces it with a regular file, run `install` again (it keeps the file as a
   backup) and merge the difference.
