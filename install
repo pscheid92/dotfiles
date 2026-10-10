@@ -30,9 +30,13 @@ link() {
     echo "LINK  $dst -> $src"
 }
 
-link gitconfig        .gitconfig
-link gitignore_global .gitignore_global
-link starship.toml    .config/starship.toml
-link zshenv          .zshenv
-link zprofile         .zprofile
-link zshrc            .zshrc
+link gitconfig            .gitconfig
+link gitignore_global     .gitignore_global
+link starship.toml        .config/starship.toml
+link zshenv               .zshenv
+link zprofile             .zprofile
+link zshrc                .zshrc
+link vimrc                .vimrc
+link ssh_config           .ssh/config
+link claude/CLAUDE.md     .claude/CLAUDE.md
+link claude/settings.json .claude/settings.json

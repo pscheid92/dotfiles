@@ -1,0 +1,8 @@
+# OrbStack's 'orb' host for its Linux machines; must stay above any Host block
+Include ~/.orbstack/ssh/config
+
+# machine-specific hosts (servers, ...), not tracked
+Include ~/.ssh/config.local
+
+Host *
+    UseKeychain yes
