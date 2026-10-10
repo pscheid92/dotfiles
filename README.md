@@ -56,7 +56,7 @@ Where a new setting goes: if child processes should inherit it (`export`,
 `PATH`), it belongs in `profile.d/`. If it only matters while you type
 (`setopt`, `alias`, functions, completion, prompt, hooks), it belongs in
 `rc.d/` or `aliases.d/`. `.zshenv` runs for every zsh, scripts included, so it
-stays nearly empty.
+stays empty.
 
 ## Notes
 

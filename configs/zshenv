@@ -1,4 +1,3 @@
-# read by every zsh, including scripts: keep this minimal
-
-# rustup: cargo and rustc on PATH
-[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+# Read by every zsh, scripts included: keep this empty. Environment goes in
+# zsh/profile.d/ (via .zprofile). Installers like rustup like to append here;
+# this file is a symlink into ~/.dotfiles, so that shows up in `git status`.
