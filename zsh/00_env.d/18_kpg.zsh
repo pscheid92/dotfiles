@@ -1,0 +1,1 @@
+source <(kpg completion zsh)
