@@ -1,6 +1,7 @@
 [user]
 	name = Patrick Scheid
 	email = p.scheid92@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFru4MC2oKpLvSyhqOY7JkAzIdzdiBw0c5/WlIczohzx
 
 [init]
 	defaultBranch = main
@@ -41,10 +42,22 @@
 
 [commit]
 	verbose = true
+	gpgsign = true
+
+[tag]
+	gpgsign = true
 
 [push]
 	autoSetupRemote = true
 	followTags = true
+
+# sign with the SSH key held by 1Password
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = ~/.config/git/allowed_signers
 
 # machine-specific overrides (work email, ...), not tracked
 [include]

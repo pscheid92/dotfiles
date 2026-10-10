@@ -19,7 +19,12 @@ silicon with Homebrew.
    ~/.dotfiles/install
    ```
 
-3. Put machine-specific settings and secrets in these files. They are read by
+3. In 1Password → Settings → Developer, turn on **Use the SSH agent** and
+   **Integrate with 1Password CLI**. SSH keys live in 1Password, and git signs
+   every commit and tag with the key in `user.signingkey`: commits fail until
+   the agent is running.
+
+4. Put machine-specific settings and secrets in these files. They are read by
    the tracked configs but are not part of this repo:
 
    - `~/.zshrc.local`: sourced by `.zshrc`
